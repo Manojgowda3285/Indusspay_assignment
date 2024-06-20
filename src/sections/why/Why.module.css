@@ -1,0 +1,14 @@
+.why-container {
+  width: 100%;
+}
+
+.why {
+  width: "100%";
+  max-width: 300px;
+  color: #1e1e1e;
+  font-family: Gilroy-Bold;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

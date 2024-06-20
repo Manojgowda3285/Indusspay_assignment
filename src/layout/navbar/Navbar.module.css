@@ -1,0 +1,206 @@
+.nav-mobile {
+    display: block;
+  }
+  
+  .nav-desktop {
+    display: none;
+  }
+  
+  .nav-container {
+    /* backdrop-filter: blur(100px); */
+    /* position: fixed; */
+    width: 100%;
+    /* top: 25px; */
+    z-index: 10;
+  }
+  
+  .nav-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    list-style-type: none;
+    gap: 3rem;
+  }
+  
+  .nav-item a {
+    color: #FFF;
+font-family: Gilroy-Medium;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+
+  .logo{
+    color: #FFF;
+font-family: Gilroy-Bold;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+  .logo.logo_active{
+    color: black;
+    z-index: 5;
+  }
+  
+  
+  .nav-link-btn {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.25rem;
+    background: #8976fd;
+    color: var(--default-white, #fff);
+    text-align: center;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem; /* 142.857% */
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    /* box-shadow: 0 0 5px 0px rgba(175, 175, 175, 0.35); */
+    position: relative;
+    transition: all 0.5s ease;
+    /* background-color: #8976fd; */
+    
+    z-index: 999999;
+  }
+  
+  .nav-btn::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    content: "";
+    background-image: url("../../assets/images/hambergur_open.svg");
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .nav-btn.active::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    content: "";
+    background-color: #ffffff;
+    background-image: url("../../assets//images/hambergur_close.svg");
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .nav-mobile-container {
+    position: absolute;
+    top:0%;
+    right: 0;
+    width: 100vw;
+    padding: 0 20px;
+    background-color: #FFF;
+    justify-content: center;
+    align-items: center;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in;
+    z-index: 1;
+  }
+  
+  .nav-mobile-container.show {
+    transform: scale(1, 1);
+  }
+  
+  .nav-mobile-container .nav-list {
+    padding-top: 50px;
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+    color: black;
+  }
+  
+  .nav-mobile-container .nav-list .nav-item {
+    color: black;
+    width: 100%;
+    padding: 15px 0px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(193, 193, 193, 0.35);
+    text-align: left;
+    z-index: 5;
+  }
+  .nav-mobile-container .nav-list .nav-item a{
+    color: #000;
+  }
+  .nav-mobile-container .nav-list .nav-item:last-child {
+    border: none;
+  }
+  
+  .dropdown-mobile {
+    display: block;
+  }
+  
+  .dropdown-desktop {
+    display: none;
+  }
+  .dropbtn {
+    background-color: #04aa6d;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black !important;
+    padding: 12px 16px !important;
+    text-decoration: none !important;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  @media (min-width: 600px) {
+    .nav-desktop {
+      display: block;
+    }
+    .nav-mobile {
+      display: none;
+    }
+    .dropdown-desktop {
+      display: block;
+    }
+    .dropdown-mobile {
+      display: none;
+    }
+    .nav-container {
+      top: 0px;
+    }
+  }
+  

@@ -1,0 +1,113 @@
+.best-container{
+    background: #F7F7F7;
+    padding: 50px 0px;  
+}
+.best{
+    color: #1E1E1E;
+font-family: Gilroy-Bold;
+font-size: 42px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.product-wrapper{
+    display: flex; 
+    flex-direction: row; 
+    padding: 6px;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+border-radius: 44px;
+background: #EEE;
+}
+.product{
+    display: flex;
+width: 84px;
+height: 45px;
+padding: 4px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+cursor: pointer;
+
+}
+.product_active{
+    border-radius: 32px;
+background: #FFF;
+}
+.product_name{
+    color: #1E1E1E;
+font-family: Gilroy-Regular;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 185%; /* 33.3px */
+}
+
+.card-item {
+    position: relative;
+    height: 100%;
+    border-radius: 20px;
+  }
+  .slick-container {
+    padding-top: 50px;
+      padding-left: -10px;
+      position: relative;
+    }
+  .slick-container button:global(.slick-arrow),
+  .slick-container button:global(.slick-arrow)::before {
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    z-index: 999;
+  }
+  .slick-container button:global(.slick-arrow)::before {
+    color: #8976fd;
+  }
+  
+  .slick-container button:global(.slick-prev) {
+    left: -18px;
+  }
+  .slick-container button:global(.slick-next) {
+    right: -18px;
+  }
+  
+  .slick-container :global(.slick-dots) {
+    bottom: -30px;
+  }
+  .slick-container :global(.slick-dots li button:before) {
+    color: #8338ec;
+    font-size: 10px;
+    height: 0px;
+    width: 0px;
+  }
+  .slick-container :global(.slick-dots li) {
+    margin: -1px;
+  }
+  
+  @media (max-width: 1024px) {
+    .slick-container button:global(.slick-prev) {
+      left: -8px;
+    }
+    .slick-container button:global(.slick-next) {
+      right: -8px;
+    }
+  
+    .slick-container button:global(.slick-arrow),
+    .slick-container button:global(.slick-arrow)::before {
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .product-wrapper{
+        gap: 4px;
+    }
+    .product{
+        width: 65px;
+        height: 30px;
+    }
+  }
